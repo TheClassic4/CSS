@@ -126,4 +126,124 @@ relative表现和static一样，除非你添加了一些额外的属性。
 
 **fixed**
 
-该
+该元素相对于视窗来定位，这意味着即便页面滚动，它还是会停留在相同的位置。
+```
+
+.fixed {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 200px;
+  background-color: white;
+}
+```
+移动浏览器对fix支持很差
+
+**absolute**
+
+该属性是相对于最近的“positioned”祖先元素定位，如果没有祖先元素，就相对于文档body元素，并且它会随着页面滚动而移动。
+```
+.relative {
+  position: relative;
+  width: 600px;
+  height: 400px;
+}
+.absolute {
+  position: absolute;
+  top: 120px;
+  right: 0;
+  width: 300px;
+  height: 200px;
+}
+```
+
+```
+.container {
+  position: relative;
+}
+nav {
+  position: absolute;
+  left: 0px;
+  width: 200px;
+}
+section {
+  /* position is static by default */
+  margin-left: 200px;
+}
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  height: 70px;
+  background-color: white;
+  width: 100%;
+}
+body {
+  margin-bottom: 120px;
+}
+```
+![position_example.png](https://upload-images.jianshu.io/upload_images/15578663-8c3bea5618a72e85.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+### float
+
+另一个布局中常用的CSS属性是float。可以用于实现文字环绕图片。
+```
+img {
+  float: right;
+  margin: 0 0 1em 1em;
+}
+```
+![float.png](https://upload-images.jianshu.io/upload_images/15578663-c0d4b7f696fb2f9a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+### clear
+
+![clear.png](https://upload-images.jianshu.io/upload_images/15578663-b1b3940133d8cf57.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+### 清除浮动（clearfix hack）
+
+如果图片是float的，并且比包含它的元素还高，就会溢出到容器外面。
+`overflow: auto;` 就可以解决这个问题
+
+![float_example.png](https://upload-images.jianshu.io/upload_images/15578663-f690784361887dbd.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+### 媒体查询
+
+用百分比宽度来布局，然后在浏览器变窄到无法容纳侧边栏中的菜单时，把布局显示成一列：
+```
+@media screen and (min-width:600px) {
+  nav {
+    float: left;
+    width: 25%;
+  }
+  section {
+    margin-left: 25%;
+  }
+}
+@media screen and (max-width:599px) {
+  nav li {
+    display: inline;
+  }
+} 
+```
+![media_screen1.png](https://upload-images.jianshu.io/upload_images/15578663-8ddb5dc3b0e5e9bb.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+![media_screen2.png](https://upload-images.jianshu.io/upload_images/15578663-6483a2462c3ed551.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+### inline-block
+
+![inline-block.png](https://upload-images.jianshu.io/upload_images/15578663-d46961aaea3dfaa2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+### flexbox
+
+flex居中
+```
+.vertical-container {
+  height: 300px;
+  display: -webkit-flex;
+  display:         flex;
+  -webkit-align-items: center;
+          align-items: center;
+  -webkit-justify-content: center;
+          justify-content: center;
+}
+```
