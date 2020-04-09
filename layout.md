@@ -193,11 +193,10 @@ img {
   margin: 0 0 1em 1em;
 }
 ```
-![float.png](https://upload-images.jianshu.io/upload_images/15578663-c0d4b7f696fb2f9a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 ### clear
 
-![clear.png](https://upload-images.jianshu.io/upload_images/15578663-b1b3940133d8cf57.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![clear.png](https://upload-images.jianshu.io/upload_images/15578663-24fef33dc261429d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 ### 清除浮动（clearfix hack）
 
