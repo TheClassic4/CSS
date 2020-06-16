@@ -79,19 +79,24 @@ inner2的宽度是 300 - 100 * (300 * 2/(200 * 3 + 300 * 2)) = 250 px
 `flex-direction: row | row-reverse | column | column-reverse;`
 
 // 换行 默认为nowrap
+
 `flex-wrap: nowrap | wrap | wrap-reverse;`
 
 // flex-flow属性是flex-direction属性和flex-wrap属性的简写形式，默认值为row nowrap。
+
 `flex-flow: <flex-direction> || <flex-wrap>;`
 
 // space-between两端对齐，space-around两边的间隔都相等，所以中间的项目间隔会是周围的边框间隔的两倍
+
 `justify-content: flex-start | flex-end | center | space-between | space-around;`
 ![justyfy-content.png](https://upload-images.jianshu.io/upload_images/15578663-62ed39f0a3f7c997.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 // align-items定义在交叉轴上如何对齐
+
 `align-items: flex-start | flex-end | center | baseline | stretch;`
 ![align-items.png](https://upload-images.jianshu.io/upload_images/15578663-2ce8ae636efc60f3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 // align-content属性定义了多根轴线的对齐方式，如果项目只有一根轴线，该属性不起作用
+
 `align-content: flex-start | flex-end | center | space-between | space-around | stretch;`
 ![align-content.png](https://upload-images.jianshu.io/upload_images/15578663-b638848507a4186c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
